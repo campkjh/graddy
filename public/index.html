@@ -212,6 +212,18 @@
   #s-home .km-search:active{background:#EBEBEB}
   #s-home .km-search svg{width:18px;height:18px;color:#9A9A9A;flex-shrink:0}
 
+  /* G-POINT mini bar */
+  #s-home .km-gpoint{margin:0 16px 14px;padding:14px 18px;background:linear-gradient(135deg,var(--wine) 0%,var(--wine-2) 100%);color:#fff;border-radius:4px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;transition:transform .15s var(--ease-out);position:relative;overflow:hidden}
+  #s-home .km-gpoint:active{transform:scale(.99)}
+  #s-home .km-gpoint::after{content:"";position:absolute;right:-30px;top:-30px;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.08),transparent 60%)}
+  #s-home .km-gp-left{display:flex;align-items:baseline;gap:10px;position:relative;z-index:1}
+  #s-home .km-gp-label{font-size:10.5px;font-weight:700;letter-spacing:1px;opacity:.85}
+  #s-home .km-gp-amt{font-size:18px;font-weight:700;letter-spacing:-.5px}
+  #s-home .km-gp-right{display:flex;align-items:center;gap:10px;position:relative;z-index:1}
+  #s-home .km-gp-attendance{display:inline-flex;align-items:center;gap:4px;font-size:11.5px;font-weight:600;padding:5px 10px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.22);border-radius:4px;backdrop-filter:blur(6px)}
+  #s-home .km-gp-attendance:active{background:rgba(255,255,255,.28)}
+  #s-home .km-gp-shop{font-size:11.5px;font-weight:600;opacity:.85}
+
   /* Category icon grid: 2 rows × N cols, horizontal swipe */
   #s-home .km-cat-scroll{padding:6px 0 22px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;overscroll-behavior-x:contain}
   #s-home .km-cat-scroll::-webkit-scrollbar{display:none}
@@ -621,6 +633,38 @@
   #s-inquiry .iq-form .field{margin-bottom:18px}
   #s-inquiry .iq-form .field label{font-size:12px;color:var(--gray-700);display:block;margin-bottom:6px;font-weight:600}
 
+  /* ===== POINT SHOP ===== */
+  #s-pointshop{background:#fff}
+  #s-pointshop .ps-balance{margin:6px 18px 14px;padding:22px 22px;background:linear-gradient(135deg,var(--wine) 0%,var(--wine-2) 100%);color:#fff;border-radius:4px;position:relative;overflow:hidden}
+  #s-pointshop .ps-balance::after{content:"";position:absolute;right:-50px;top:-50px;width:160px;height:160px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.08),transparent 60%)}
+  #s-pointshop .ps-bal-label{font-size:11px;font-weight:600;letter-spacing:1px;opacity:.85;position:relative}
+  #s-pointshop .ps-bal-amt{font-size:30px;font-weight:700;letter-spacing:-1px;margin-top:4px;position:relative}
+  #s-pointshop .ps-bal-actions{display:flex;gap:8px;margin-top:14px;position:relative}
+  #s-pointshop .ps-bal-actions button{flex:1;padding:10px;background:rgba(255,255,255,.16);color:#fff;border:1px solid rgba(255,255,255,.22);border-radius:4px;font-size:12.5px;font-weight:600;backdrop-filter:blur(6px);transition:background .2s var(--ease-out)}
+  #s-pointshop .ps-bal-actions button:active{background:rgba(255,255,255,.26)}
+  #s-pointshop .ps-cat{display:flex;gap:6px;padding:0 18px 14px;overflow-x:auto;scrollbar-width:none}
+  #s-pointshop .ps-cat::-webkit-scrollbar{display:none}
+  #s-pointshop .ps-cat button{padding:8px 14px;border-radius:4px;background:#fff;border:1px solid var(--gray-200);font-size:12.5px;color:var(--gray-700);font-weight:600;white-space:nowrap;transition:all .2s var(--ease-out)}
+  #s-pointshop .ps-cat button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+  #s-pointshop .ps-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0 18px 30px}
+  #s-pointshop .ps-card{padding:16px 14px;background:#fff;border:1px solid var(--gray-150);border-radius:4px;cursor:pointer;display:flex;flex-direction:column;gap:8px;transition:all .15s var(--ease-out)}
+  #s-pointshop .ps-card:active{transform:scale(.98);border-color:var(--wine)}
+  #s-pointshop .ps-card .ps-icon{width:42px;height:42px;border-radius:4px;background:#F4F4F4;display:flex;align-items:center;justify-content:center;color:var(--ink-3)}
+  #s-pointshop .ps-card .ps-icon svg{width:22px;height:22px}
+  #s-pointshop .ps-card .ps-cat-tag{font-size:10px;color:var(--gray-600);font-weight:600;background:#F4F4F4;border:1px solid #EEEEEE;padding:2px 6px;border-radius:4px;width:fit-content;line-height:1.3}
+  #s-pointshop .ps-card .ps-name{font-size:13.5px;color:var(--ink);font-weight:700;letter-spacing:-.3px;line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  #s-pointshop .ps-card .ps-desc{font-size:11px;color:var(--gray-600);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:32px}
+  #s-pointshop .ps-card .ps-price{font-size:14px;color:var(--wine);font-weight:700;letter-spacing:-.3px;display:flex;align-items:baseline;gap:2px;border-top:1px solid var(--divider);padding-top:8px;margin-top:auto}
+  #s-pointshop .ps-card .ps-price .unit{font-size:10.5px;color:var(--gray-500);font-weight:600;margin-left:2px}
+
+  /* Point history */
+  #s-points-history .ps-h-item{display:flex;justify-content:space-between;align-items:center;padding:14px 22px;border-bottom:1px solid var(--divider)}
+  #s-points-history .ps-h-item .info .desc{font-size:13.5px;font-weight:600;color:var(--ink);letter-spacing:-.2px}
+  #s-points-history .ps-h-item .info .date{font-size:11px;color:var(--gray-500);margin-top:3px}
+  #s-points-history .ps-h-item .amt{font-size:15px;font-weight:700;letter-spacing:-.3px}
+  #s-points-history .ps-h-item .amt.plus{color:var(--wine)}
+  #s-points-history .ps-h-item .amt.minus{color:var(--gray-700)}
+
   /* ===== PHRASES ===== */
   #s-phrase .phr-count{padding:4px 22px 10px;font-size:12px;color:var(--gray-500);font-weight:500}
   #s-phrase .phr{display:flex;align-items:center;justify-content:space-between;padding:14px 22px;border-bottom:1px solid var(--divider)}
@@ -801,6 +845,23 @@
       <div class="km-search" onclick="nav('search')">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
         <span>어떤 전문가가 필요하세요?</span>
+      </div>
+
+      <!-- G-POINT mini bar -->
+      <div class="km-gpoint" onclick="nav('pointshop');loadPointShop()">
+        <div class="km-gp-left">
+          <span class="km-gp-label">G-POINT</span>
+          <span class="km-gp-amt" id="homePointsAmt">0P</span>
+        </div>
+        <div class="km-gp-right">
+          <span class="km-gp-attendance" onclick="event.stopPropagation();doAttendance()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:13px;height:13px"><polyline points="20 6 9 17 4 12"/></svg>
+            출석
+          </span>
+          <span class="km-gp-shop">
+            샵 ›
+          </span>
+        </div>
       </div>
 
       <!-- Category icon grid: 2 rows, swipe horizontally -->
@@ -1272,6 +1333,44 @@
       </div>
     </section>
 
+    <!-- ===== POINT SHOP ===== -->
+    <section class="screen" id="s-pointshop">
+      <div class="appbar">
+        <button class="back" onclick="goBack()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px"><polyline points="15 18 9 12 15 6"/></svg></button>
+        <div style="flex:1"></div>
+        <div class="title-pill">포인트 샵</div>
+        <button class="icon-btn-plain" onclick="loadPointHistory()" title="내역">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </button>
+      </div>
+      <div class="ps-balance">
+        <div class="ps-bal-label">보유 G-POINT</div>
+        <div class="ps-bal-amt" id="psBalance">0 P</div>
+        <div class="ps-bal-actions">
+          <button onclick="doAttendance()">출석체크 +100P</button>
+          <button onclick="loadPointHistory()">사용 내역</button>
+        </div>
+      </div>
+      <div class="ps-cat">
+        <button class="on" data-cat="all" onclick="filterShopCat(this,'all')">전체</button>
+        <button data-cat="쿠폰" onclick="filterShopCat(this,'쿠폰')">쿠폰</button>
+        <button data-cat="기프티콘" onclick="filterShopCat(this,'기프티콘')">기프티콘</button>
+        <button data-cat="상담" onclick="filterShopCat(this,'상담')">상담</button>
+        <button data-cat="서비스" onclick="filterShopCat(this,'서비스')">서비스</button>
+      </div>
+      <div class="ps-grid" id="psGrid"></div>
+    </section>
+
+    <!-- ===== POINT HISTORY ===== -->
+    <section class="screen" id="s-points-history">
+      <div class="appbar">
+        <button class="back" onclick="goBack()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px"><polyline points="15 18 9 12 15 6"/></svg></button>
+        <div style="flex:1"></div>
+        <div class="title-pill">포인트 내역</div>
+      </div>
+      <div id="psHistory"></div>
+    </section>
+
     <!-- ===== PHRASES (자주쓰는 문구) ===== -->
     <section class="screen" id="s-phrase">
       <div class="appbar">
@@ -1383,6 +1482,7 @@ function nav(name, opts){
     else if(name==='my') loadMyPage();
     else if(name==='notifications') loadNotifications();
     else if(name==='worklog') loadWorklog();
+    else if(name==='pointshop') loadPointShop();
   }
   // Move bottom pill indicator after layout
   requestAnimationFrame(()=>{ moveBottomPill(); initAllIndicators(); });
@@ -1510,6 +1610,9 @@ async function loadHome(){
     const data = await api('/auth/me');
     AUTH.user = data.user;
     localStorage.setItem('graddy_user', JSON.stringify(data.user));
+
+    // Update home points
+    if($('#homePointsAmt')) $('#homePointsAmt').textContent = (data.user.points||0).toLocaleString()+'P';
 
     // Noti dot
     const noti = await api('/notifications');
@@ -1782,8 +1885,16 @@ async function loadProDashboard(){
 
 async function doAttendance(){
   if(!AUTH.token) return toast('로그인이 필요합니다');
-  toast('출석체크 완료! +100P');
-  loadHome();
+  try{
+    const data = await api('/points/attendance', {method:'POST'});
+    toast(`출석체크 완료! +${data.reward}P`);
+    if(AUTH.user) AUTH.user.points = data.balance;
+    localStorage.setItem('graddy_user', JSON.stringify(AUTH.user));
+    loadHome();
+  }catch(e){
+    if(e.message.includes('이미')) toast('오늘은 이미 출석체크 하셨어요');
+    else toast(e.message);
+  }
 }
 
 // ============ SEARCH ============
@@ -2306,6 +2417,7 @@ function renderMyMenu(isExpert){
       <div class="gl">계정</div>
       <div class="item" onclick="nav('profile-edit');loadProfileEdit()">프로필 설정<span class="arrow">›</span></div>
       <div class="item" onclick="toast('관심 카테고리 설정')">관심있는 카테고리 설정<span class="arrow">›</span></div>
+      <div class="item" onclick="nav('pointshop');loadPointShop()">포인트 샵<span class="arrow">›</span></div>
     </div>
     <div class="strip"></div>
     <div class="menu-group">
@@ -2459,6 +2571,85 @@ async function addPhrase(){
 }
 async function rmPhrase(id,btn){
   try{await api('/phrases/'+id,{method:'DELETE'});btn.parentElement.remove();$('#phCnt').textContent=$$('#phraseList .phr').length}catch(e){toast(e.message)}
+}
+
+// ============ POINT SHOP ============
+const SHOP_ICONS = {
+  discount: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="5" x2="5" y2="19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>',
+  clock: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>',
+  star: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>',
+  badge: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15a4 4 0 100-8 4 4 0 000 8z"/><path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12"/></svg>',
+  gift: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 100-5C13 2 12 7 12 7z"/></svg>',
+};
+let SHOP_FILTER = 'all';
+let SHOP_ITEMS_CACHE = [];
+
+async function loadPointShop(){
+  if(!AUTH.token) return toast('로그인이 필요합니다');
+  try{
+    const [bal, shop] = await Promise.all([
+      api('/points/balance'),
+      api('/points/shop')
+    ]);
+    SHOP_ITEMS_CACHE = shop.items;
+    $('#psBalance').textContent = (bal.points||0).toLocaleString() + ' P';
+    renderShopGrid();
+  }catch(e){ toast(e.message); }
+}
+
+function filterShopCat(el, cat){
+  $$('.ps-cat button').forEach(b=>b.classList.remove('on'));
+  el.classList.add('on');
+  SHOP_FILTER = cat;
+  renderShopGrid();
+}
+
+function renderShopGrid(){
+  const items = SHOP_FILTER==='all' ? SHOP_ITEMS_CACHE : SHOP_ITEMS_CACHE.filter(i=>i.category===SHOP_FILTER);
+  $('#psGrid').innerHTML = items.map(it=>`
+    <div class="ps-card" onclick="buyShopItem('${it.id}')">
+      <div class="ps-icon">${SHOP_ICONS[it.icon]||SHOP_ICONS.gift}</div>
+      <div class="ps-cat-tag">${esc(it.category)}</div>
+      <div class="ps-name">${esc(it.name)}</div>
+      <div class="ps-desc">${esc(it.desc)}</div>
+      <div class="ps-price">${it.cost.toLocaleString()}<span class="unit">P</span></div>
+    </div>
+  `).join('');
+}
+
+async function buyShopItem(itemId){
+  const item = SHOP_ITEMS_CACHE.find(i=>i.id===itemId);
+  if(!item) return;
+  if(!confirm(`${item.name}\n${item.cost.toLocaleString()}P를 사용하여 교환하시겠어요?`)) return;
+  try{
+    const data = await api('/points/shop/buy', {method:'POST', body:JSON.stringify({item_id:itemId})});
+    toast(`${item.name} 교환 완료!`);
+    if(AUTH.user) AUTH.user.points = data.balance;
+    localStorage.setItem('graddy_user', JSON.stringify(AUTH.user));
+    $('#psBalance').textContent = (data.balance||0).toLocaleString() + ' P';
+  }catch(e){ toast(e.message); }
+}
+
+async function loadPointHistory(){
+  if(!AUTH.token) return;
+  nav('points-history');
+  try{
+    const data = await api('/points/history');
+    if(!data.history.length){
+      $('#psHistory').innerHTML = '<div style="text-align:center;padding:80px 20px;color:var(--gray-500);font-size:13px">포인트 내역이 없습니다.</div>';
+      return;
+    }
+    $('#psHistory').innerHTML = data.history.map(h=>{
+      const isPlus = h.amount>0;
+      return `<div class="ps-h-item">
+        <div class="info">
+          <div class="desc">${esc(h.description)}</div>
+          <div class="date">${timeAgo(h.created_at)}</div>
+        </div>
+        <div class="amt ${isPlus?'plus':'minus'}">${isPlus?'+':''}${h.amount.toLocaleString()}P</div>
+      </div>`;
+    }).join('');
+  }catch(e){ toast(e.message); }
 }
 
 // ============ INQUIRY ============

@@ -42,6 +42,7 @@ app.use('/api/notifications', require('./routes/notifications'));
 app.use('/api/search', require('./routes/search'));
 app.use('/api/reviews', require('./routes/reviews'));
 app.use('/api/upload', require('./routes/upload'));
+app.use('/api/points', require('./routes/points'));
 
 // Socket.io for real-time chat
 io.use((socket, next) => {
